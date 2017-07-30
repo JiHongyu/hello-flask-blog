@@ -1,0 +1,13 @@
+{% extends "blog_base.html" %}
+
+{% block content %}
+    <h3>Contents</h3>
+    <div>
+        <ul>
+        {% for piece in contents %}
+            <li><a href="/article/{{ piece['id'] }}">{{ piece['name'] }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}
